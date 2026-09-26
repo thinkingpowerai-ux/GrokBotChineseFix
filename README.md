@@ -1,5 +1,7 @@
 # Grok Bot 中文逗號快捷鍵修正
 
+<img src="assets/robot-icon.png" alt="GrokBotChineseFix 機器人圖示" width="88">
+
 Windows 上的 Grok Bot 桌面版把 `Ctrl + ,` 用來開啟設定。這個小工具只在 Grok Bot 視窗位於前景時攔截該組合鍵，改為輸入全形逗號 `，`。其他程式的 `Ctrl + ,` 維持原本功能。
 
 ## 下載後使用
@@ -25,6 +27,8 @@ Windows 上的 Grok Bot 桌面版把 `Ctrl + ,` 用來開啟設定。這個小�
 離線執行檔讀取前景視窗所屬程序的執行檔名稱，僅在名稱為 `Grok Bot.exe` 時攔截 `Ctrl + ,`，並以 Windows Unicode `SendInput` 輸入 U+FF0C。它不依賴 Electron/Chromium 視窗標題、視窗類別或固定安裝路徑，也不修改 Grok Bot、Windows 鍵盤配置或登錄檔。
 
 在 Windows 命令提示字元執行 `build.cmd`，可使用系統的 .NET Framework C# 編譯器從 `GrokBotChineseFix.cs` 重建執行檔。本專案與 Grok Bot 及 xAI 無關。
+
+圖示原始繪製程式位於 `assets/generate_icon.py`，使用 Python 與 Pillow 重建 PNG、ICO。一般使用者只需下載 EXE。
 
 ## English
 

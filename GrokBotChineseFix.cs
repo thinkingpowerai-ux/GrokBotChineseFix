@@ -2,9 +2,15 @@ using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
+using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.Windows.Forms;
+
+[assembly: AssemblyTitle("GrokBotChineseFix")]
+[assembly: AssemblyProduct("GrokBotChineseFix")]
+[assembly: AssemblyVersion("1.0.1.0")]
+[assembly: AssemblyFileVersion("1.0.1.0")]
 
 internal static class GrokBotChineseFix
 {
@@ -158,6 +164,7 @@ internal static class GrokBotChineseFix
         public StatusWindow()
         {
             Text = WindowTitle;
+            this.Icon = System.Drawing.Icon.ExtractAssociatedIcon(Application.ExecutablePath);
             StartPosition = FormStartPosition.CenterScreen;
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
