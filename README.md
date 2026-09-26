@@ -1,5 +1,8 @@
 # Grok Bot 中文逗號快捷鍵修正
 
+[Code signing policy](CODE_SIGNING_POLICY.md) — 正在申請正式簽章；目前 v1.0.1 執行檔仍未簽章。
+
+
 <img src="assets/robot-icon.png" alt="GrokBotChineseFix 機器人圖示" width="88">
 
 Windows 上的 Grok Bot 桌面版把 `Ctrl + ,` 用來開啟設定。這個小工具只在 Grok Bot 視窗位於前景時攔截該組合鍵，改為輸入全形逗號 `，`。其他程式的 `Ctrl + ,` 維持原本功能。
