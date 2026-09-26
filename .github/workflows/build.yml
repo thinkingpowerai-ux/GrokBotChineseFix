@@ -1,0 +1,24 @@
+name: Build Windows executable
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Build from source
+        shell: cmd
+        run: build.cmd
+      - name: Upload unsigned build for review
+        uses: actions/upload-artifact@v7
+        with:
+          name: GrokBotChineseFix-unsigned
+          path: GrokBotChineseFix.exe
+          if-no-files-found: error
